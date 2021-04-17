@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63456c69-9774-4c21-ab76-eeb759b84d4f" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/k-anonymity.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataSet.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataSetConfig.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataSet_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/disorderQuality.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orderQuality.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tool.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pYuakFhj7RqsIanKSmIgy3DSJk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.全局.GOPATH.is.expanded" value="true" />
+    <property name="configurable.模块.GOPATH.is.expanded" value="false" />
+    <property name="configurable.项目.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gota" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\dataFrame" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\series" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\dal\db" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\model" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\global" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\initialize" />
+      <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (2)">
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestGeneralize\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestGeneralize\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestGeneralize\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewDataSet\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (5)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewDataSet\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (2)" />
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (1)" />
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize" />
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (1)" />
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (5)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615373728439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1615373728439" />
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1616330011287">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1616330011287" />
+    <state x="524" y="119" key="#xdebugger.evaluate" timestamp="1616909905921">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="524" y="119" key="#xdebugger.evaluate/0.0.1536.834@0.0.1536.834" timestamp="1616909905921" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1618637827388">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1618637827388" />
+    <state width="1493" height="348" key="GridCell.Tab.0.bottom" timestamp="1618646100974">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="348" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
+    <state width="1493" height="348" key="GridCell.Tab.0.center" timestamp="1618646100974">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="348" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
+    <state width="1493" height="348" key="GridCell.Tab.0.left" timestamp="1618646100974">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="348" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
+    <state width="1493" height="348" key="GridCell.Tab.0.right" timestamp="1618646100974">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="348" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom" timestamp="1618645728567">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
+    <state width="1493" height="284" key="GridCell.Tab.1.center" timestamp="1618645728567">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
+    <state width="1493" height="284" key="GridCell.Tab.1.left" timestamp="1618645728567">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
+    <state width="1493" height="284" key="GridCell.Tab.1.right" timestamp="1618645728567">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="284" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
+    <state x="316" y="38" key="SettingsEditor" timestamp="1617588463953">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="316" y="38" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1617588463953" />
+    <state width="775" height="424" key="XDebugger.FullValuePopup" timestamp="1618468925630">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="775" height="424" key="XDebugger.FullValuePopup/0.0.1536.834@0.0.1536.834" timestamp="1618468925630" />
+    <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1617006390264">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1617006390264" />
+    <state x="372" y="19" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618644446653">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="372" y="19" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1618644446653" />
+    <state x="582" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618640007442">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="582" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1618640007442" />
+    <state x="0" y="0" width="1243" height="820" key="dock-window-1" timestamp="1617027218441">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="0" y="0" width="1243" height="820" key="dock-window-1/0.0.1536.834@0.0.1536.834" timestamp="1617027218441" />
+    <state x="467" y="149" width="601" height="536" key="find.popup" timestamp="1618641772832">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="467" y="149" width="601" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1618641772832" />
+  </component>
+</project>
