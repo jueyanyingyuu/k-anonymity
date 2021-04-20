@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-//func TestGeneralize(t *testing.T) {
+//func BenchmarkDataSet_LClustering(b *testing.B) {
 //	csvStr := `
 //性别,年龄,身高,健康状况
 //男,中年,172,脑溢血
@@ -31,8 +31,8 @@ import (
 //	fmt.Println(clustering)
 //}
 
-func TestGeneralize(t *testing.T) {
-	var rows = 10
+func BenchmarkDataSet_LClustering(b *testing.B) {
+	var rows = 1000
 	var seriesList []series.Series
 
 	var areasList = []string{"京","津","冀","晋","内蒙古","辽","吉","黑","沪","苏","浙","皖","闽","赣","鲁","豫","鄂","湘","粤","桂","琼","渝","川","黔","滇","藏","陕","甘","青","宁","新","港","澳"}

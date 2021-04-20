@@ -1,7 +1,6 @@
 package k_anonymity
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/go-gota/gota/dataframe"
 	"github.com/go-gota/gota/series"
@@ -20,7 +19,7 @@ func NewDataSet(df dataframe.DataFrame, dfConfig DataSetConfig) (*DataSet, error
 	dataSet := new(DataSet)
 	var seriesList []series.Series
 	for idx, qualityName := range df.Names() {
-		if _, ok := dfConfig.order[qualityName]; ok {
+		if config, ok := dfConfig.order[qualityName]; ok {
 			vals := make([]interface{}, df.Nrow(), df.Nrow())
 			for k := 0; k < df.Nrow(); k++ {
 				v := df.Elem(k, idx).String()
@@ -28,20 +27,20 @@ func NewDataSet(df dataframe.DataFrame, dfConfig DataSetConfig) (*DataSet, error
 					Min: v,
 					Max: v,
 				}
-				str, _ := json.Marshal(orderQuality)
-				vals[k] = string(str)
+				str, _ := config.OrderQualityFuncStruct.Marshal(orderQuality)
+				vals[k] = str
 			}
 			orderSeries := series.New(vals, series.String, qualityName)
 			seriesList = append(seriesList, orderSeries)
-		} else if _, ok := dfConfig.disorder[qualityName]; ok {
+		} else if config, ok := dfConfig.disorder[qualityName]; ok {
 			vals := make([]interface{}, df.Nrow(), df.Nrow())
 			for k := 0; k < df.Nrow(); k++ {
 				v := df.Elem(k, idx).String()
 				disorderQuality := DisorderQuality{
 					Set: []string{v},
 				}
-				str, _ := json.Marshal(disorderQuality)
-				vals[k] = string(str)
+				str, _ := config.DisorderQualityFuncStruct.Marshal(disorderQuality)
+				vals[k] = str
 			}
 			disorderSeries := series.New(vals, series.String, qualityName)
 			seriesList = append(seriesList, disorderSeries)
@@ -176,9 +175,11 @@ func (d DataSet) LClustering() (dataframe.DataFrame, error) {
 		if config, ok := d.dataSetConfig.order[name]; ok {
 			vals := make([]string, 0, d.dataFrame.Nrow())
 			for j := range rQ {
-				orderQuality := OrderQuality{}
 				orderStr := rQ[j].Elem(0, i).String()
-				_ = json.Unmarshal([]byte(orderStr), &orderQuality)
+				orderQuality,err := config.OrderQualityFuncStruct.Unmarshal(orderStr)
+				if err != nil {
+					return DSharp, err
+				}
 				val, err := config.OrderQualityFuncStruct.FormatFunc(orderQuality)
 				if err != nil {
 					return DSharp, err
@@ -191,9 +192,11 @@ func (d DataSet) LClustering() (dataframe.DataFrame, error) {
 		} else if config, ok := d.dataSetConfig.disorder[name]; ok {
 			vals := make([]string, 0, d.dataFrame.Nrow())
 			for j := range rQ {
-				disorderQuality := DisorderQuality{}
 				disorderStr := rQ[j].Elem(0, i).String()
-				_ = json.Unmarshal([]byte(disorderStr), &disorderQuality)
+				disorderQuality,err := config.DisorderQualityFuncStruct.Unmarshal(disorderStr)
+				if err != nil {
+					return DSharp, err
+				}
 				val, err := config.DisorderQualityFuncStruct.FormatFunc(disorderQuality)
 				if err != nil {
 					return DSharp, err

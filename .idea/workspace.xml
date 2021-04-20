@@ -11,18 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63456c69-9774-4c21-ab76-eeb759b84d4f" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/k-anonymity.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataSet.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataSetConfig.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataSet_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/disorderQuality.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderQuality.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataSet.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataSet_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/disorderQuality.go" beforeDir="false" afterPath="$PROJECT_DIR$/disorderQuality.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderQuality.go" beforeDir="false" afterPath="$PROJECT_DIR$/orderQuality.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +75,18 @@
       <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (2)">
+  <component name="RunManager" selected="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering">
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gobench" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QBenchmarkDataSet_LClustering\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="k-anonymity" />
       <working_directory value="$PROJECT_DIR$" />
@@ -126,24 +131,13 @@
       <pattern value="^\QTestNewDataSet\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (5)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="k-anonymity" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/jueyanyingyu/k-anonymity" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestNewDataSet\E$" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (2)" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (1)" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (1)" />
-        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +165,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1615373728439" />
+    <state x="600" y="218" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618646818164">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="600" y="218" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1618646818164" />
     <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1616330011287">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -183,38 +181,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1618637827388" />
-    <state width="1493" height="348" key="GridCell.Tab.0.bottom" timestamp="1618646100974">
+    <state width="1493" height="315" key="GridCell.Tab.0.bottom" timestamp="1618658797315">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="348" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
-    <state width="1493" height="348" key="GridCell.Tab.0.center" timestamp="1618646100974">
+    <state width="1493" height="315" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618658797315" />
+    <state width="1493" height="315" key="GridCell.Tab.0.center" timestamp="1618658797314">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="348" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
-    <state width="1493" height="348" key="GridCell.Tab.0.left" timestamp="1618646100974">
+    <state width="1493" height="315" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618658797314" />
+    <state width="1493" height="315" key="GridCell.Tab.0.left" timestamp="1618658797314">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="348" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
-    <state width="1493" height="348" key="GridCell.Tab.0.right" timestamp="1618646100974">
+    <state width="1493" height="315" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618658797314" />
+    <state width="1493" height="315" key="GridCell.Tab.0.right" timestamp="1618658797315">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="348" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618646100974" />
-    <state width="1493" height="284" key="GridCell.Tab.1.bottom" timestamp="1618645728567">
+    <state width="1493" height="315" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618658797315" />
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom" timestamp="1618648052165">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
-    <state width="1493" height="284" key="GridCell.Tab.1.center" timestamp="1618645728567">
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
+    <state width="1493" height="284" key="GridCell.Tab.1.center" timestamp="1618648052165">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
-    <state width="1493" height="284" key="GridCell.Tab.1.left" timestamp="1618645728567">
+    <state width="1493" height="284" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
+    <state width="1493" height="284" key="GridCell.Tab.1.left" timestamp="1618648052165">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
-    <state width="1493" height="284" key="GridCell.Tab.1.right" timestamp="1618645728567">
+    <state width="1493" height="284" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
+    <state width="1493" height="284" key="GridCell.Tab.1.right" timestamp="1618648052165">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618645728567" />
+    <state width="1493" height="284" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
     <state x="316" y="38" key="SettingsEditor" timestamp="1617588463953">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -239,9 +237,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="0" width="1243" height="820" key="dock-window-1/0.0.1536.834@0.0.1536.834" timestamp="1617027218441" />
-    <state x="467" y="149" width="601" height="536" key="find.popup" timestamp="1618641772832">
+    <state x="467" y="149" width="601" height="536" key="find.popup" timestamp="1618656542908">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="467" y="149" width="601" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1618641772832" />
+    <state x="467" y="149" width="601" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1618656542908" />
   </component>
 </project>

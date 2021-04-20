@@ -1,7 +1,6 @@
 package k_anonymity
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/go-gota/gota/dataframe"
 	"github.com/go-gota/gota/series"
@@ -15,30 +14,40 @@ func generalize(d dataframe.DataFrame, config DataSetConfig) (dataframe.DataFram
 		if orderConfig, ok := config.order[name]; ok {
 			var orderElemList []OrderQuality
 			for i := 0; i < col.Len(); i++ {
-				val := OrderQuality{}
 				valStr := col.Val(i).(string)
-				_ = json.Unmarshal([]byte(valStr), &val)
+				val, err := orderConfig.OrderQualityFuncStruct.Unmarshal(valStr)
+				if err != nil {
+					return dataframe.DataFrame{}, err
+				}
 				orderElemList = append(orderElemList, val)
 			}
 			order, err := orderConfig.OrderQualityFuncStruct.ExpandFunc(orderElemList...)
 			if err != nil {
 				return dataframe.DataFrame{}, err
 			}
-			orderStr, _ := json.Marshal(order)
-			seriesList = append(seriesList, series.New(string(orderStr), series.String, name))
+			orderStr, err := orderConfig.OrderQualityFuncStruct.Marshal(order)
+			if err != nil {
+				return dataframe.DataFrame{}, err
+			}
+			seriesList = append(seriesList, series.New(orderStr, series.String, name))
 		} else if disorderConfig, ok := config.disorder[name]; ok {
 			var disorderElemList []DisorderQuality
 			for i := 0; i < col.Len(); i++ {
-				val := DisorderQuality{}
 				valStr := col.Val(i).(string)
-				_ = json.Unmarshal([]byte(valStr), &val)
+				val, err := disorderConfig.DisorderQualityFuncStruct.Unmarshal(valStr)
+				if err != nil {
+					return dataframe.DataFrame{}, err
+				}
 				disorderElemList = append(disorderElemList, val)
 			}
 			disorder, err := disorderConfig.DisorderQualityFuncStruct.MergeFunc(disorderElemList...)
 			if err != nil {
 				return dataframe.DataFrame{}, err
 			}
-			disorderStr, _ := json.Marshal(disorder)
+			disorderStr, err := disorderConfig.DisorderQualityFuncStruct.Marshal(disorder)
+			if err != nil {
+				return dataframe.DataFrame{}, err
+			}
 			seriesList = append(seriesList, series.New(string(disorderStr), series.String, name))
 		} else {
 			seriesList = append(seriesList, series.New(nil, col.Type(), name))
@@ -76,14 +85,18 @@ func loss(a, b dataframe.DataFrame, config DataSetConfig) (float64, error) {
 		tupleLoss := float64(0)
 		for j := 0; j < a.Ncol(); j++ {
 			seriesName := a.Names()[j]
-			if _, ok := config.order[seriesName]; ok {
+			if orderConfig, ok := config.order[seriesName]; ok {
 				oStr := a.Elem(i, j).String()
 				osStr := b.Elem(i, j).String()
-				order := OrderQuality{}
-				orderSharp := OrderQuality{}
 
-				_ = json.Unmarshal([]byte(oStr), &order)
-				_ = json.Unmarshal([]byte(osStr), &orderSharp)
+				order, err := orderConfig.OrderQualityFuncStruct.Unmarshal(oStr)
+				if err != nil {
+					return 0, err
+				}
+				orderSharp, err := orderConfig.OrderQualityFuncStruct.Unmarshal(osStr)
+				if err != nil {
+					return 0, err
+				}
 
 				f := config.order[seriesName].OrderQualityFuncStruct.DValueFunc
 				newLoss, err := lossOrderQuality(order, orderSharp, f)
@@ -92,14 +105,18 @@ func loss(a, b dataframe.DataFrame, config DataSetConfig) (float64, error) {
 				}
 				tupleLoss += config.order[seriesName].Weight * newLoss
 
-			} else if _, ok := config.disorder[seriesName]; ok {
+			} else if disorderConfig, ok := config.disorder[seriesName]; ok {
 				dStr := a.Elem(i, j).String()
 				dsStr := b.Elem(i, j).String()
-				disorder := DisorderQuality{}
-				disorderSharp := DisorderQuality{}
 
-				_ = json.Unmarshal([]byte(dStr), &disorder)
-				_ = json.Unmarshal([]byte(dsStr), &disorderSharp)
+				disorder, err := disorderConfig.DisorderQualityFuncStruct.Unmarshal(dStr)
+				if err != nil {
+					return 0, err
+				}
+				disorderSharp, err := disorderConfig.DisorderQualityFuncStruct.Unmarshal(dsStr)
+				if err != nil {
+					return 0, err
+				}
 
 				newLoss, err := lossDisorderQuality(disorder, disorderSharp)
 				if err != nil {

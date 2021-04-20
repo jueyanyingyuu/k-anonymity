@@ -1,9 +1,11 @@
 package k_anonymity
 
 import (
+	"bytes"
 	"fmt"
 	"math"
 	"strconv"
+	"strings"
 )
 
 // 有序属性
@@ -18,6 +20,8 @@ type OrderQualityConfig struct {
 }
 
 type OrderQualityFuncStruct struct {
+	Unmarshal  func(string) (OrderQuality, error)
+	Marshal    func(OrderQuality) (string, error)
 	FormatFunc func(OrderQuality) (string, error)
 	ExpandFunc func(...OrderQuality) (OrderQuality, error)
 	DValueFunc func(OrderQuality) (float64, error)
@@ -27,10 +31,31 @@ const DefaultOrderWeight float64 = 1
 
 func GetDefaultInt64OrderQualityFuncStruct() OrderQualityFuncStruct {
 	return OrderQualityFuncStruct{
+		DefaultInt64OrderUnmarshalFunc,
+		DefaultInt64OrderMarshalFunc,
 		DefaultInt64OrderFormatFunc,
 		DefaultInt64OrderExpandFunc,
 		DefaultInt64OrderDValueFunc,
 	}
+}
+
+func DefaultInt64OrderUnmarshalFunc(str string) (OrderQuality, error) {
+	vals := strings.Split(str, ",")
+	if len(vals) != 2 {
+		return OrderQuality{}, fmt.Errorf("无法正确解析有序属性")
+	}
+	return OrderQuality{
+		Min: vals[0],
+		Max: vals[1],
+	}, nil
+}
+
+func DefaultInt64OrderMarshalFunc(o OrderQuality) (string, error) {
+	buf := bytes.Buffer{}
+	buf.WriteString(o.Min)
+	buf.WriteString(",")
+	buf.WriteString(o.Max)
+	return buf.String(), nil
 }
 
 func DefaultInt64OrderFormatFunc(o OrderQuality) (string, error) {
@@ -81,10 +106,31 @@ func DefaultInt64OrderDValueFunc(o OrderQuality) (float64, error) {
 
 func GetDefaultFloat64OrderQualityFuncStruct() OrderQualityFuncStruct {
 	return OrderQualityFuncStruct{
+		DefaultFloat64OrderUnmarshalFunc,
+		DefaultFloat64OrderMarshalFunc,
 		DefaultFloat64OrderFormatFunc,
 		DefaultFloat64OrderExpandFunc,
 		DefaultFloat64OrderDValueFunc,
 	}
+}
+
+func DefaultFloat64OrderUnmarshalFunc(str string) (OrderQuality, error) {
+	vals := strings.Split(str, ",")
+	if len(vals) != 2 {
+		return OrderQuality{}, fmt.Errorf("无法正确解析有序属性")
+	}
+	return OrderQuality{
+		Min: vals[0],
+		Max: vals[1],
+	}, nil
+}
+
+func DefaultFloat64OrderMarshalFunc(orderQuality OrderQuality) (string, error) {
+	buf := bytes.Buffer{}
+	buf.WriteString(orderQuality.Min)
+	buf.WriteString(",")
+	buf.WriteString(orderQuality.Max)
+	return buf.String(), nil
 }
 
 func DefaultFloat64OrderFormatFunc(o OrderQuality) (string, error) {
