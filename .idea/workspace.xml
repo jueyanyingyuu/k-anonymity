@@ -12,11 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="63456c69-9774-4c21-ab76-eeb759b84d4f" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataSet.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpu.prof" beforeDir="false" afterPath="$PROJECT_DIR$/cpu.prof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataSet_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/dataSet_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/disorderQuality.go" beforeDir="false" afterPath="$PROJECT_DIR$/disorderQuality.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k-anonymity.test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/k-anonymity.test.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mem.prof" beforeDir="false" afterPath="$PROJECT_DIR$/mem.prof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orderQuality.go" beforeDir="false" afterPath="$PROJECT_DIR$/orderQuality.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool.go" beforeDir="false" afterPath="$PROJECT_DIR$/tool.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,18 @@
       <recent name="C:\Users\jueyanyingyu\go\src\github.com\jueyanyingyu\k-anonymity\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering">
+  <component name="RunManager" selected="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering (1)">
+    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="k-anonymity" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gobench" />
+      <kind value="PACKAGE" />
+      <package value="github.com/jueyanyingyu/k-anonymity" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QBenchmarkDataSet_LClustering\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="k-anonymity" />
       <working_directory value="$PROJECT_DIR$" />
@@ -120,24 +132,13 @@
       <pattern value="^\QTestGeneralize\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="k-anonymity" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/jueyanyingyu/k-anonymity" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestNewDataSet\E$" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering (1)" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (2)" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize (1)" />
         <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestGeneralize" />
-        <item itemvalue="Go 测试.github.com/jueyanyingyu/k-anonymity 中的 TestNewDataSet (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -181,38 +182,38 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1618637827388" />
-    <state width="1493" height="315" key="GridCell.Tab.0.bottom" timestamp="1618658797315">
+    <state width="1493" height="315" key="GridCell.Tab.0.bottom" timestamp="1618927676360">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="315" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618658797315" />
-    <state width="1493" height="315" key="GridCell.Tab.0.center" timestamp="1618658797314">
+    <state width="1493" height="315" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618927676360" />
+    <state width="1493" height="315" key="GridCell.Tab.0.center" timestamp="1618927676360">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="315" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618658797314" />
-    <state width="1493" height="315" key="GridCell.Tab.0.left" timestamp="1618658797314">
+    <state width="1493" height="315" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1618927676360" />
+    <state width="1493" height="315" key="GridCell.Tab.0.left" timestamp="1618927676360">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="315" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618658797314" />
-    <state width="1493" height="315" key="GridCell.Tab.0.right" timestamp="1618658797315">
+    <state width="1493" height="315" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1618927676360" />
+    <state width="1493" height="315" key="GridCell.Tab.0.right" timestamp="1618927676360">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="315" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618658797315" />
-    <state width="1493" height="284" key="GridCell.Tab.1.bottom" timestamp="1618648052165">
+    <state width="1493" height="315" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1618927676360" />
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom" timestamp="1618927483277">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
-    <state width="1493" height="284" key="GridCell.Tab.1.center" timestamp="1618648052165">
+    <state width="1493" height="284" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1618927483277" />
+    <state width="1493" height="284" key="GridCell.Tab.1.center" timestamp="1618927483277">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
-    <state width="1493" height="284" key="GridCell.Tab.1.left" timestamp="1618648052165">
+    <state width="1493" height="284" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1618927483277" />
+    <state width="1493" height="284" key="GridCell.Tab.1.left" timestamp="1618927483277">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
-    <state width="1493" height="284" key="GridCell.Tab.1.right" timestamp="1618648052165">
+    <state width="1493" height="284" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1618927483277" />
+    <state width="1493" height="284" key="GridCell.Tab.1.right" timestamp="1618927483277">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="284" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618648052165" />
+    <state width="1493" height="284" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1618927483277" />
     <state x="316" y="38" key="SettingsEditor" timestamp="1617588463953">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -237,9 +238,23 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="0" width="1243" height="820" key="dock-window-1/0.0.1536.834@0.0.1536.834" timestamp="1617027218441" />
-    <state x="467" y="149" width="601" height="536" key="find.popup" timestamp="1618656542908">
+    <state x="467" y="149" width="601" height="536" key="find.popup" timestamp="1618924023271">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="467" y="149" width="601" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1618656542908" />
+    <state x="467" y="149" width="601" height="536" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1618924023271" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/tool.go</url>
+          <line>16</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/k_anonymity$github_com_jueyanyingyu_k_anonymity__BenchmarkDataSet_LClustering__1_.out" NAME="github.com/jueyanyingyu/k-anonymity 中的 BenchmarkDataSet_LClustering (1) Coverage Results" MODIFIED="1618925374320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

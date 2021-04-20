@@ -1,9 +1,8 @@
 package k_anonymity
 
 import (
-	"bytes"
+	"encoding/binary"
 	"fmt"
-	"strings"
 )
 
 // 无序属性
@@ -34,23 +33,47 @@ func GetDefaultDisorderQualityFuncStruct() DisorderQualityFuncStruct {
 	}
 }
 func DefaultDisorderUnmarshalFunc(str string) (DisorderQuality, error) {
-	vals := strings.Split(str, ",")
 	result := DisorderQuality{}
-	for _, v := range vals {
-		result.Set = append(result.Set, v)
+	buf := []byte(str)
+	setLen, length := binary.Uvarint(buf)
+	if length <= 0 {
+		return result, fmt.Errorf("无法正确解析无序属性")
+	}
+	buf = buf[length:]
+
+	for i := uint64(0); i < setLen; i++ {
+		strLen, length := binary.Uvarint(buf)
+		if length <= 0 {
+			return result, fmt.Errorf("无法正确解析无序属性")
+		}
+		buf = buf[length:]
+		result.Set = append(result.Set, string(buf[:strLen]))
+		buf = buf[strLen:]
 	}
 	return result, nil
 }
 func DefaultDisorderMarshalFunc(d DisorderQuality) (string, error) {
-	buf := bytes.Buffer{}
-	for i, v := range d.Set {
-		buf.WriteString(v)
-		if i == len(d.Set)-1 {
-			break
-		}
-		buf.WriteString(",")
+	var sliceList [][]byte
+	var size int
+
+	setLenBuf := make([]byte, binary.MaxVarintLen64)
+	setLen := binary.PutUvarint(setLenBuf, uint64(len(d.Set)))
+	size += setLen
+	sliceList = append(sliceList, setLenBuf[:setLen])
+
+	for _, v := range d.Set {
+		strLenBuf := make([]byte, binary.MaxVarintLen64)
+		strLen :=binary.PutUvarint(strLenBuf, uint64(len(v)))
+		size += strLen
+		size += len(v)
+		sliceList = append(sliceList, strLenBuf[:strLen])
+		sliceList = append(sliceList, []byte(v))
 	}
-	return buf.String(),nil
+	slice := make([]byte, 0, size)
+	for _, v := range sliceList {
+		slice = append(slice, v...)
+	}
+	return string(slice), nil
 }
 
 func DefaultDisorderFormatFunc(d DisorderQuality) (string, error) {

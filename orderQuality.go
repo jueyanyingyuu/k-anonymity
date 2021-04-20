@@ -2,6 +2,7 @@ package k_anonymity
 
 import (
 	"bytes"
+	"encoding/binary"
 	"fmt"
 	"math"
 	"strconv"
@@ -40,22 +41,42 @@ func GetDefaultInt64OrderQualityFuncStruct() OrderQualityFuncStruct {
 }
 
 func DefaultInt64OrderUnmarshalFunc(str string) (OrderQuality, error) {
-	vals := strings.Split(str, ",")
-	if len(vals) != 2 {
-		return OrderQuality{}, fmt.Errorf("无法正确解析有序属性")
+
+	result := OrderQuality{}
+	buf := []byte(str)
+
+	minLen, length := binary.Uvarint(buf)
+	if length <= 0 {
+		return result, fmt.Errorf("无法正确解析有序属性")
 	}
-	return OrderQuality{
-		Min: vals[0],
-		Max: vals[1],
-	}, nil
+	buf = buf[length:]
+	result.Min = string(buf[:minLen])
+	buf = buf[minLen:]
+
+	maxLen, length := binary.Uvarint(buf)
+	if length <= 0 {
+		return result, fmt.Errorf("无法正确解析有序属性")
+	}
+	buf = buf[length:]
+	result.Max = string(buf[:maxLen])
+	buf = buf[maxLen:]
+
+	return result, nil
 }
 
 func DefaultInt64OrderMarshalFunc(o OrderQuality) (string, error) {
-	buf := bytes.Buffer{}
-	buf.WriteString(o.Min)
-	buf.WriteString(",")
-	buf.WriteString(o.Max)
-	return buf.String(), nil
+	minBuf := make([]byte, binary.MaxVarintLen64)
+	minLen := binary.PutUvarint(minBuf, uint64(len(o.Min)))
+
+	maxBuf := make([]byte, binary.MaxVarintLen64)
+	maxLen := binary.PutUvarint(maxBuf, uint64(len(o.Max)))
+
+	slice := make([]byte, 0, minLen+len(o.Min)+maxLen+len(o.Max))
+	slice = append(slice, minBuf[:minLen]...)
+	slice = append(slice, []byte(o.Min)...)
+	slice = append(slice, maxBuf[:maxLen]...)
+	slice = append(slice, []byte(o.Max)...)
+	return string(slice), nil
 }
 
 func DefaultInt64OrderFormatFunc(o OrderQuality) (string, error) {
